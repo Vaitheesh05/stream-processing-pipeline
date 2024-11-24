@@ -1,15 +1,15 @@
 1.Start all the daemon for the following component:
   Hadoop
   Zookeeper:
-    nohup bin/zookeeper-server-start.sh config/zookeeper.properties >> nohup.out &
+  >>nohup bin/zookeeper-server-start.sh config/zookeeper.properties >> nohup.out &
   Kafka Server:
-    nohup bin/kafka-server-start.sh config/server.properties >> nohup.out &
+  >>nohup bin/kafka-server-start.sh config/server.properties >> nohup.out &
 
 2.Create topic:
-  bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic real_time_weblogs
+  >>bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic real_time_weblogs
 
 3.Run the Kafka Producer(Java file) and verify by the Kafka consumer
-  bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic real_time_weblogs --from-beginning
+  >>bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic real_time_weblogs --from-beginning
 
 4.PostgreSQL
   >>use mydatabase;
