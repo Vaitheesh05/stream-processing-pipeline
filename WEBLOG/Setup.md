@@ -36,7 +36,11 @@
 8.Using Spark-submit aggregrate the response_code and URL
   >>spark-submit hive_aggregration.py
 
+  S3SECRETKEY
+S3ACCESSKEY
+
 9.Create the dashboard in grafana to showcase:
   ->Total_ResponseCode by Host and IP Address
   ->Total_URL by Host and IP Address
   
+
